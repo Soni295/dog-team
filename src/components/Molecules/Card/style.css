@@ -1,0 +1,29 @@
+.Card {
+  border: solid 1px black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 300px 80px ;
+  height: 430px;
+  width: 300px;
+  justify-items: center;
+  align-items: center;
+}
+
+.Card div:not(:first-child){
+  display: grid;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  border-top: solid 1px black;
+}
+
+
+.Card div:nth-child(2){
+  background-color: white;
+}
+.Card > div > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}

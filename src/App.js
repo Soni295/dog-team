@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react'
+import { MyteamProvider } from './context/MyTeamContext'
+import { getBreedsList } from './services/getBreedsList'
+import {
+  BrowserRouter as BR,
+  Switch, Route, 
+} from 'react-router-dom'
+import { Home } from './pages/Home'
+import { MyTeam } from './pages/MyTeam'
+import { SearchPage } from './pages/SearchPage'
+import { NavBar } from './components/Molecules/NavBar/NavBar'
+import './index.css'
 
-function App() {
+export const App = () => {
+
+  const [listOfBreeds, setListOfBreeds] = useState([])
+
+  useEffect(()=>{
+    getBreedsList().then(r => setListOfBreeds(r))
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BR>
+      <NavBar />
+      <Switch>
+        <MyteamProvider>
+        <Route exact 
+          path='/' 
+          render={props => 
+            <Home {...props} listOfBreeds={listOfBreeds} />
+          }
+        />
+        <Route exact 
+          path='/Search/:breed' 
+          render={props => 
+            <SearchPage {...props} listOfBreeds={listOfBreeds} />} 
+        />
+        <Route exact
+          path='/MyTeam' 
+          render={props => <MyTeam{...props} />} 
+        />
+        </MyteamProvider>
+      </Switch>
+    </BR>
   );
 }
-
-export default App;

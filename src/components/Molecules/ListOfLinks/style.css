@@ -1,0 +1,52 @@
+.list-of-link {
+  display: grid;
+}
+
+.list-of-link > a {
+  font-size: 1.25rem;
+  padding: .5rem .1875rem;
+  text-align: center;
+  border-radius: 1.875rem;
+  color: #574277;
+  background: linear-gradient(90deg, rgba(199,247,247,1) 0%, rgba(152,236,200,1) 48%, rgba(199,247,247,1) 100%);
+}
+
+.list-of-link > a:visited{
+  color: #574277;
+}
+
+.list-of-link > a:hover{
+  background: linear-gradient(90deg, rgba(47,200,200) 0%, rgb(204 250 231) 48%, rgba(47,200,200) 100%);
+}
+
+@media only screen and (min-width: 20em) {
+  .list-of-link {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0rem .9375;
+    gap: 1.0625rem .5625rem;
+    align-items: center;
+    margin-top: 3.625rem;
+  }
+
+  .list-of-link > a {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .list-of-link {
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+
+  .list-of-link > a {
+    font-size: 1.6875rem;
+  }
+}
+
+@media only screen and (min-width: 87em) {
+  .list-of-link {
+    grid-template-columns: repeat(5, 1fr);
+    margin: 1rem;
+  }
+}

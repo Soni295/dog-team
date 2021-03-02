@@ -1,0 +1,14 @@
+.Search__Button {
+  background-color: #c6eff9;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 0px 20px 20px 0px;
+  font-weight: 500;
+  color: #4b4b66;
+  width: 20%;
+}
+.Search__Button:hover {
+  cursor: pointer; 
+  background-color: #ceecff;
+}

@@ -1,0 +1,52 @@
+.Search {
+  display: grid;
+  margin-top: 50px;
+  justify-content: center;
+  align-self: center;
+}
+
+.Search > form > * {
+  height: 100%;
+}
+
+@media only screen and (min-width: 20em) {
+  .Search > form {
+    width: 280px;
+  }
+  .Search > form > .Search__input {
+    font-size: 15px;
+    width: 75%;
+  }
+  .Search > form > .Search__Button {
+    font-size: 15px;
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .Search > form {
+    width: 400px;
+  }
+
+  .Search > form > .Search__input {
+    font-size: 20px;
+  }
+
+  .Search > form > .Search__Button {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 87em) {
+  .Search > form {
+    width: 600px;
+  }
+
+  .Search > form > .Search__input {
+    font-size: 20px;
+  }
+
+  .Search > form > .Search__Button {
+    font-size: 20px;
+  }
+}

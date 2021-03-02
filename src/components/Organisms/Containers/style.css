@@ -1,0 +1,13 @@
+.dog-container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  gap: .625rem;
+}
+.dog-container .Card {
+  background: #c9a4a4;
+}
+.dog-container .Card:nth-child(odd) {
+  background: #dff4f3;
+}

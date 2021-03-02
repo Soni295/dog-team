@@ -1,0 +1,55 @@
+.Loanding {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.Loanding__Circle {
+  border-radius: 50%;
+  border: solid #f3f3f3; 
+  border-top: solid #b1d6ee; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media only screen and (min-width: 20em) {
+  .Loanding {
+    margin-top: 5rem;
+  }
+
+  .Loanding__Circle {
+    border-width: .3125rem;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 0.7s linear infinite;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .Loanding {
+    margin-top: 12.5rem;
+  }
+
+  .Loanding__Circle {
+    border-width: .5rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    animation: spin 0.7s linear infinite;
+  }
+}
+
+@media only screen and (min-width: 87em) {
+  .Loanding {
+    margin-top: 15.625rem;
+  }
+
+  .Loanding__Circle {
+    border-width: .625rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    animation: spin 1s linear infinite;
+  }
+}
