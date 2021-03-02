@@ -10,6 +10,11 @@
 }
 
 @media only screen and (min-width: 20em) {
+
+  .Search {
+    margin-top: 2rem;
+  }
+
   .Search > form {
     width: 280px;
   }

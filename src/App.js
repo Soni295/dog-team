@@ -15,29 +15,28 @@ export const App = () => {
 
   const [listOfBreeds, setListOfBreeds] = useState([])
 
-  useEffect(()=>{
-    getBreedsList().then(r => setListOfBreeds(r))
-  }, [])
+  useEffect(()=> getBreedsList().then(r => setListOfBreeds(r)) , [])
+
   return (
     <BR>
       <NavBar />
       <Switch>
         <MyteamProvider>
-        <Route exact 
-          path='/' 
-          render={props => 
-            <Home {...props} listOfBreeds={listOfBreeds} />
-          }
-        />
-        <Route exact 
-          path='/Search/:breed' 
-          render={props => 
-            <SearchPage {...props} listOfBreeds={listOfBreeds} />} 
-        />
-        <Route exact
-          path='/MyTeam' 
-          render={props => <MyTeam{...props} />} 
-        />
+          <Route exact 
+            path='/' 
+            render={props => 
+              <Home {...props} listOfBreeds={listOfBreeds} />
+            }
+          />
+          <Route exact 
+            path='/Search/:breed' 
+            render={props => 
+              <SearchPage {...props} listOfBreeds={listOfBreeds} />} 
+          />
+          <Route exact
+            path='/MyTeam' 
+            render={props => <MyTeam{...props} />} 
+          />
         </MyteamProvider>
       </Switch>
     </BR>

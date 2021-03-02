@@ -1,5 +1,5 @@
 .dog-container {
-  margin-top: 100px;
+  margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; 

@@ -20,7 +20,7 @@ export const AddDog = ({link, breed}) => {
         setStateButton({type: 'add'})
       }
     }
-  }, [block])
+  }, [block, breed])
 
 
   useEffect(()=>{
@@ -29,7 +29,7 @@ export const AddDog = ({link, breed}) => {
         setStateButton({type: 'remove'})
       }
     }
-  }, [])
+  }, [breed, myTeam])
 
 
   const handleDispatch = () => {
