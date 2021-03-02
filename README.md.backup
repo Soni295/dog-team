@@ -30,10 +30,7 @@ $ npm start
 </div>
 
 ```
-> paque
-> React
-> react-router-dom
-
-
-
+> paquetes
+> +-React
+> +-react-router-dom
 ```

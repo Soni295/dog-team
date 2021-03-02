@@ -6,7 +6,7 @@
 ### El proyecto se incia con
 
 ```bash
-$ git clone -----
+$ git clone https://github.com/Soni295/dog-team
 $ cd dog-team
 $ npm install  
 $ npm start
